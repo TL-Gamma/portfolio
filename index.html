@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Accueil</a>
+            <a href="#about">Mon parcours</a>
+            <a href="#services">Projets</a>
+            <a href="#portfolio">Compétences</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <!-- La frame contenant le slider -->
+
+        <div class="image-slider">
+            <div class="slide fade">
+                <img src="images/bg/PhareMinou.JPG" alt="Image 3">
+            </div>
+            <div class="slide fade">
+                <img src="images/bg/Bureau_boulot.jpg" alt="Image 4">
+            </div>
+            <div class="slide fade">
+                <img src="images/bg/NYC.JPG" alt="Image 2">
+            </div>
+            <div class="slide fade">
+                <img src="images/bg/Festival_sono.jpg" alt="Image 5">
+            </div>
+        </div>
+        <!-- La frame fixe avec le contenu texte et l'image de CV -->
+        <div class="home-content">
+
+            <div class="text-content">
+                <h1>Titouan LASQUELLEC</h1>
+                <h3>Je suis <span class="multiple-text"></span></h3>
+                <p class="home-content-btn">
+                    <a href="images\CV - 2025 - Titouan LASQUELLEC.pdf" download="CV_Jacovetti.pdf"
+                        class="btn">Télécharger le CV</a>
+                    <a href="https://github.com/TL-Gamma" class="btn">Github</a>
+                    <a href="https://www.linkedin.com/in/titouan-lasquellec/" class="btn">Linkedin</a>
+                </p>
+            </div>
+            <div class="home-img">
+                <img src="images/CV.jpg" alt="Image CV">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <!-- Add an image here if necessary -->
+        </div>
+
+        <div class="about-content">
+            <h1 class="heading">Mon <span>parcours</span></h2>
+
+                <div class="about-event">
+                    <div class="about-img"><img src="images/breizelec.svg" alt=""></div>
+
+                    <div class="about-content">
+                        <div class="about-date">2024</div>
+                        <h3 class="about-content">Stage à l'étranger à BREIZELEC Canada</h3>
+                        <p>Initiation à la réparation électronique pour equipement agricoles Case New Holland (CNH),
+                            Tableau de bords, boitiers de transmission...</p>
+                    </div>
+
+                    <div class="about-content">
+
+                        <div class="about-date">2024-2025</div>
+                        <h3 class="about-content">Alternance à BREIZELEC </h3>
+                        <p>Conception d’un banc de test pour les tracteurs CLAAS ELIOS et NEXOS.</p>
+                    </div>
+
+                </div>
+
+                <div class="about-event">
+                    <div class="about-img"><img src="images/CollegeLionelGroulx.jpg" alt=""></div>
+
+                    <div class="about-content">
+                        <h2 class="about-content">Semestre d'étude a l'étranger</h2>
+                        <div class="about-date">2024</div>
+
+                        <p>Semestre d'étude au Québec au CEGEP Lionel Groulx. Réalisation d'un projet de T-shirt
+                            connecté lors d'un salon de démonstration des projets du CEGEP</p>
+                    </div>
+                </div>
+
+                <div class="about-event">
+                    <div class="about-img"><img src="images/logo-iut-bm-blanc.png" alt=""></div>
+
+                    <div class="about-content">
+                        <h2>BUT GEII</h2>
+                        <div class="about-date">2021 - 2025</div>
+                        <p>Études en Génie Electrique et Informatique Industrielle - Option Electronique Système
+                            Embarqué
+                        </p>
+                    </div>
+                </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <section class="services" id="services">
+        <h2 class="heading">Mes <span>Projets</span></h2>
+
+        <div class="services-container">
+
+            <div class="services-box">
+                <i class='bx bx-bot'></i>
+                <h3>Robot suiveur de ligne</h3>
+                <p>Réalisation d'un robot suiveur de ligne pour la compétition de robotique de cachan</p>
+                <a href="a_RobotSuiveur.html" class="btn">Lire plus</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-water'></i>
+                <h3>Module de comunication sous-marine</h3>
+                <p>Dévloppement d'une montre communicant sous l'eau a partir du protocole DTMF. Substitution du
+                    composant de gestion DTMF par un microcontrolleur</p>
+                <a href="b_DTMF.html" class="btn">Lire plus</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxs-microchip'></i>
+                <h3>PerformChandail</h3>
+                <p>Conception de A à Z d'un T-shirt connecté capable de tracker la course d'un courreur sans téléphone
+                    et pour un poids de 100g
+                </p>
+                <a href="c_PerformChandail.html" class="btn">Lire plus</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-wifi'></i>
+                <h3>LemarConnect Alguos</h3>
+                <p>Ce projet est un réseau de capteur connecté en LoRa permettant de simplifier la culture des algues.
+                    L'objectif, réaliser pour le laboratoire LEMAR une série de 10 circuit imprimés, pour un cout de
+                    production minimal et une autonomie de 10 ans pour deux piles AA</p>
+                <a href="d_LemarConnectAlguos.html" class="btn">Lire plus</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Mes <span>Compétences</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/Altium.png" alt="">
+                <a href="1_concevoir.html">
+                    <div class="portfolio-layer">
+                </a>
+                <h4>Concevoir</h4>
+            </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/OutilsMesure.jpg" alt="">
+            <a href="2_verifier.html">
+                <div class="portfolio-layer">
+            </a>
+            <h4>Vérifier</h4>
+        </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/Alternance/InterieurBancTest.png" alt="">
+            <a href="3_maintenir.html">
+                <div class="portfolio-layer">
+            </a>
+            <h4>Maintenir</h4>
+        </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/Projets/LemarConnectV1.jpg" alt="">
+            <a href="4_implanter.html">
+                <div class="portfolio-layer">
+            </a>
+            <h4>Implanter</h4>
+        </div>
+        </div>
+
+        <div class="portfolio-box">
+            <img src="images/bg/Festival_sono.jpg" alt="">
+            <a href="5_sonoriser.html">
+                <div class="portfolio-layer">
+            </a>
+            <h4>Sonoriser</h4>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contactez <span>Moi !</span></h2>
+
+        <form action="#">
+            <address>
+                <br>
+                <p>Vous pouvez me contacter à cette adresse : <a href="mailto:titouan.lasq@gmail.com"
+                        style="color:#FFFFFF;">titouan.lasq@gmail.com</a></p>
+                <p>Mon numéro de téléphone : <a href="+33781044657" style="color:#FFFFFF;">+33 7 69 98 98 64</a></p>
+                <p>Réseaux :
+                <div class="social-media"><a href="https://www.linkedin.com/in/titouan-lasquellec/"><i
+                            class="bx bxl-linkedin"></i></a></p>
+                </div>
+
+            </address>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Portfolio de Titouan LASQUELLEC | IUT Génie Electrique et Informatique Industrielle - <a
+                    href="https://www.iut-brest.fr/" style="color:#FFFFFF;">Brest Morlaix</a>
+            </p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
