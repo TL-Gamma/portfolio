@@ -33,6 +33,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+
 .header {
     position: fixed;
     top: 0;
@@ -309,6 +310,15 @@ span {
     /* Image à gauche, texte à droite */
 }
 
+#menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: inline-block;
+    }
+}
 
 
 
@@ -760,7 +770,7 @@ address>a {
     font-size: 2.5em;
     padding: 2rem;
     margin: 2rem 0;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
@@ -814,6 +824,13 @@ address>a {
     border-radius: 1rem;
 }
 
+.competence-content a {
+    color: rgb(117, 126, 181);
+
+    text-align: left;
+    /* Align text to the left */
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .competence {
@@ -841,6 +858,96 @@ address>a {
     }
 
     .competence-content p {
+        font-size: 1.2rem;
+    }
+}
+
+
+.projet {
+    font-size: 2.5em;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.projet-img img {
+    width: 100%;
+    max-width: 50rem;
+    object-fit: scale-down;
+    border-radius: 1rem;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+.projet-content {
+    text-align: center;
+}
+
+.projet-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.projet-content p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.projet-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    /* Adjust the gap as needed */
+}
+
+.projet-content {
+    flex: 1;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.projet-img {
+    flex: 0 0 auto;
+    max-width: 50rem;
+    /* Adjust the width as needed */
+}
+
+.projet-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projet {
+        font-size: 2em;
+        padding: 1.5rem;
+    }
+
+    .projet-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .projet-content p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .projet {
+        font-size: 1.5em;
+        padding: 1rem;
+    }
+
+    .projet-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .projet-content p {
         font-size: 1.2rem;
     }
 }
