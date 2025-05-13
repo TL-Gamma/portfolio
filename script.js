@@ -36,8 +36,8 @@ window.onscroll = () => {
 ScrollReveal({
     reset: true,
     distance: '80px',
-    duration: 2000,
-    delay: 200
+    duration: 1000,
+    delay: 100
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
@@ -46,7 +46,7 @@ ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 const typed = new Typed('.multiple-text', {
-    strings: ['musicien', 'étudiant', 'passionné', 'électronicien', 'curieux'],
+    strings: ['étudiant','musicien', 'technicien', 'passionné', 'électronicien', 'curieux', 'créatif',],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -71,3 +71,31 @@ function showSlides() {
 }
 
 showSlides();
+// Cibler toutes les images avec l'attribut "data-zoom"
+let images = document.querySelectorAll('.projet-img img');
+let modal = document.getElementById('zoomModal');
+let modalImg = document.getElementById('imgZoom');
+let captionText = document.getElementById('caption');
+let closeBtn = document.querySelector('.close-btn');
+
+// Ajouter un événement de clic à chaque image
+images.forEach(image => {
+    image.addEventListener('click', function () {
+        let src = image.getAttribute('data-zoom');
+        modal.style.display = 'flex'; // Afficher la modale
+        modalImg.src = src; // Charger l'image dans la modale
+        captionText.innerHTML = image.alt; // Afficher la légende si nécessaire
+    });
+});
+
+// Fermer la modale lorsqu'on clique sur le bouton de fermeture
+closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none'; // Cacher la modale
+});
+
+// Fermer la modale en cliquant n'importe où en dehors de l'image
+modal.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none'; // Cacher la modale
+    }
+});

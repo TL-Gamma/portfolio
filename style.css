@@ -8,6 +8,8 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 :root {
@@ -32,7 +34,6 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
-
 
 .header {
     position: fixed;
@@ -238,26 +239,15 @@ span {
 
 .about-img img {
     width: 30vw;
-    /* Réduit la taille de l'image */
-    max-width: 500px;
-    /* Définit une limite maximale */
-    float: left;
-    /* Positionne l'image à droite */
-    margin-left: 20px;
-    /* Ajoute un espacement pour éviter que le texte ne colle à l'image */
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
     border-radius: 10px;
-    /* Ajoute un léger arrondi aux bords pour un meilleur rendu */
-    max-width: 500px;
-    /* Empêche une image trop grande */
-    border-radius: 10px;
-    /* Arrondi pour un effet plus moderne */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Ajoute une ombre subtile */
-    align-items: center;
-    margin-right: 5rem;
     object-fit: cover;
-    /* Ajuste bien l'image */
 }
+
+
 
 
 .about-event {
@@ -310,15 +300,6 @@ span {
     /* Image à gauche, texte à droite */
 }
 
-#menu-icon {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    #menu-icon {
-        display: inline-block;
-    }
-}
 
 
 
@@ -328,7 +309,7 @@ span {
 }
 
 .services h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .services-container {
@@ -559,6 +540,17 @@ span {
     html {
         font-size: 55%;
     }
+
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 50vw;
+        margin: 2rem 0;
+    }
 }
 
 @media (max-width: 991px) {
@@ -585,6 +577,10 @@ span {
     .footer {
         padding: 2rem 3%;
     }
+}
+
+#menu-icon {
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -636,7 +632,7 @@ span {
     }
 
     .about img {
-        width: 70wv;
+        width: 70vw;
         margin-top: 4rem;
     }
 
@@ -671,11 +667,11 @@ span {
 
 @media (max-width: 365px) {
     .home-img img {
-        width: 90wv;
+        width: 90vw;
     }
 
     .about-img img {
-        width: 90wv;
+        width: 90vw;
     }
 
     .footer {
@@ -789,12 +785,12 @@ address>a {
 }
 
 .competence-content h3 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 1rem;
 }
 
 .competence-content p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5;
 }
 
@@ -815,11 +811,13 @@ address>a {
 .competence-img {
     flex: 0 0 auto;
     max-width: 50rem;
+
     /* Adjust the width as needed */
 }
 
 .competence-img img {
     width: 100%;
+    max-height: 45rem;
     height: auto;
     border-radius: 1rem;
 }
@@ -879,19 +877,21 @@ address>a {
     border-radius: 1rem;
     margin: 0 auto 2rem;
     display: block;
+    cursor: pointer;
 }
 
 .projet-content {
     text-align: center;
+
 }
 
 .projet-content h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .projet-content p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5;
 }
 
@@ -905,20 +905,112 @@ address>a {
 
 .projet-content {
     flex: 1;
+
     text-align: left;
     /* Align text to the left */
+}
+
+.projet-content i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.projet-content li::marker {
+    font-size: 2rem;
+    margin-right: 20rem;
 }
 
 .projet-img {
     flex: 0 0 auto;
     max-width: 50rem;
+
     /* Adjust the width as needed */
 }
 
 .projet-img img {
     width: 100%;
+    max-height: 500px;
     height: auto;
     border-radius: 1rem;
+}
+
+.competence-content li {
+    list-style-type: disc;
+    margin-left: 4rem;
+    font-size: 2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.competence-content li::marker {
+    font-size: 2rem;
+    margin-right: 20rem;
+}
+
+.competence-container:nth-child(even) {
+    flex-direction: row-reverse;
+    /* Image à gauche, texte à droite */
+}
+
+.competence-container:nth-child(odd) {
+    flex-direction: row;
+    /* Image à droite, texte à gauche */
+}
+
+.projet-container:nth-child(even) {
+    flex-direction: row-reverse;
+    /* Image à gauche, texte à droite */
+}
+
+.projet-container:nth-child(odd) {
+    flex-direction: row;
+    /* Image à droite, texte à gauche */
+}
+
+/* Style pour la modale */
+.zoom-modal {
+    display: none;
+    /* Par défaut, la modale est cachée */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom-modal.active {
+    display: flex;
+}
+
+/* Contenu de l'image zoomée */
+.zoom-modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc;
 }
 
 /* Responsive design */
@@ -950,4 +1042,19 @@ address>a {
     .projet-content p {
         font-size: 1.2rem;
     }
+}
+
+.competence {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.projet-img-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

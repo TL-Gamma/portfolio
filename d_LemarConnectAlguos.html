@@ -20,7 +20,7 @@
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="index.html#portfolio">Retour</a>
+            <a href="index.html#services">Retour</a>
 
         </nav>
     </header>
@@ -29,10 +29,67 @@
 
         <h2 class="heading"> <span>LemarConnect Alguos</span></h2>
         <div class="projet-content">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi voluptas sequi
-                dolores at quod exercitationem nesciunt voluptatum amet repellendus officiis odit cumque, maxime, ipsa
-                porro, ratione obcaecati excepturi quaerat fugiat.</p>
-                
+            <div class="projet-container">
+                <div class="projet-content">
+                    <h3 class="heading">Introduction et Objectifs du projet</h3>
+                    <p>LemarConnect Alguos est un projet conçu spécifiquement pour les laboratoires de l'IUEM, visant à
+                        surveiller la croissance des algues dans un climat contrôlé. Il permet aux chercheurs de mesurer
+                        à distance la température, la lumière et l'humidité dans deux environnements distincts,
+                        facilitant ainsi le suivi des conditions de culture. Le système collecte et transmet en temps
+                        réel les données, offrant une gestion automatisée via InfluxDB, Grafana et RocketChat. Conçu
+                        pour être modulaire, évolutif et économique, il garantit une surveillance fiable des algues tout
+                        en répondant aux contraintes d'autonomie et de résistance aux conditions environnementales.</p>
+
+                </div>
+                <div class="projet-img"><img src="/projets/LemarConnect/Implantation tank.png" alt="Image robot"
+                        data-zoom="true"><img src="/projets/LemarConnect/Implantation.png" alt="Image PCB final"
+                        data-zoom="true">
+                </div>
+
+            </div>
+
+            <div class="projet-content">
+                <h3 class="heading"> Développement d'un réseau de communication </h3>
+                <div class="projet-img-ctr">
+                    <img src="/projets/LemarConnect/Lemar Connect Alguos Reseau.png" alt="Image PCB final"
+                        data-zoom="true">
+
+                </div>
+                <i>Architecture réseau globale du systeme</i>
+                <br>
+                <p>Dans le cadre du projet LemarConnect Alguos, j’ai participé au développement d’un réseau de
+                    communication basé sur le protocole LoRaWAN, afin d’assurer la transmission à longue portée et
+                    faible consommation des données environnementales (température, humidité, luminosité). Ce réseau
+                    permet aux capteurs déployés dans les bassins de culture d’envoyer les données vers un serveur
+                    central, via The Things Stack. Cette architecture assure une communication fiable et continue entre
+                    les modules de mesure et les outils d’analyse comme InfluxDB et Grafana.Nous avons également
+                    anticipé les besoins de maintenance en facilitant la reprogrammation des cartes électroniques et
+                    l'intégration de nouveaux capteurs IoT. Pour cela, une application desktop dédiée a été développée,
+                    permettant aux techniciens de configurer et mettre à jour les modules facilement, sans connaissances
+                    avancées en programmation. </p>
+            </div>
+            <div class="projet-content">
+                <h3 class="heading"> Développement de différents prototypes prototype </h3>
+                <div class="projet-img-ctr">
+                    <img src="/projets/LemarConnect/IoT Device.png" alt="Image PCB final" data-zoom="true">
+
+                </div>
+                <i>Vue en bloc d'un équipement du réseau LoRa</i>
+                <br>
+
+                <p>Le système IoT repose sur une architecture modulaire : une carte principale (main board) gère
+                    l’alimentation, le traitement des données et la communication, tandis que chaque capteur
+                    (température, humidité, luminosité) est monté sur une carte dédiée pour faciliter l’entretien et
+                    l’adaptation à différents environnements. La carte principale est construite autour d’un
+                    microcontrôleur ESP32 et d’un modem LoRa SX1262, sélectionnés pour leur faible consommation et leur
+                    compatibilité avec les outils open source (Arduino IDE). Une antenne PIFA a été conçue et simulée
+                    pour assurer une bonne performance radio tout en réduisant les coûts. Ce choix technique garantit
+                    une intégration simple, évolutive et économique, tout en assurant une communication robuste avec
+                    l'infrastructure LoRaWAN déployée sur le terrain. </p>
+            </div>
+        </div>
+        </div>
+
         </div>
 
     </section>
@@ -44,7 +101,7 @@
             <div class="services-box">
                 <i class="bx bx-code-alt"></i>
                 <h3>LemarConnect Alguos</h3>
-                <p>Repository complet du projet avec les différentes traces du projet, documentations, schémas
+                <p>Repository GitHub du projet avec les différentes traces du projet, documentations, schémas
                     électriques... </p>
                 <a href="https://github.com/Remiker/lemarConnect" class="btn">Lien vers le projet GitHub</a>
             </div>

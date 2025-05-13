@@ -9,7 +9,7 @@
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -20,18 +20,72 @@
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="index.html#portfolio">Retour</a>
+            <a href="index.html#services">Retour</a>
 
         </nav>
     </header>
+
     <section class="projet" id="home">
 
-        <h2 class="heading"> <span>Montre de communication sous-marine</span></h2>
+        <h2 class="heading"> Projet :<span>Montre de communication sous-marine</span></h2>
         <div class="projet-content">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi voluptas sequi
-                dolores at quod exercitationem nesciunt voluptatum amet repellendus officiis odit cumque, maxime, ipsa
-                porro, ratione obcaecati excepturi quaerat fugiat.</p>
-                
+            <div class="projet-container">
+                <div class="projet-content">
+                    <h3 class="heading">Introduction et Objectifs du projet</h3>
+                    <p>Dans le cadre de ce projet, j’ai exploré l’utilisation des signaux DTMF (Dual-Tone
+                        Multi-Frequency) dans des environnements non conventionnels, comme sous l’eau. Mon objectif
+                        principal était de développer une chaîne de traitement capable de capter et d’interpréter ces
+                        signaux avec précision, même dans des conditions difficiles. Pour cela, j’ai intégré un
+                        microcontrôleur, notamment le Raspberry Pi Pico, afin de gérer le traitement numérique. Le
+                        projet m’a amené à étudier en détail la propagation des signaux DTMF dans différents milieux et
+                        à optimiser les algorithmes de décodage pour garantir fiabilité et performance.</p>
+
+                </div>
+                <div class="projet-img"><img src="/projets/DTMF/SAE3_Schema.png" alt="Image robot" data-zoom="true"><img
+                        src="/projets/DTMF/Schéma chaine de com.png" alt="Image PCB final" data-zoom="true">
+                </div>
+            </div>
+            <div class="projet-container">
+                <div class="projet-content">
+                    <h3 class="heading"> Expérimentation avec le composant DTMF sous l'eau </h3>
+                    <p> J’ai mené des tests dans une bassine d’eau pour simuler un environnement sous-marin et observer
+                        le comportement des signaux DTMF. L’objectif était de comprendre comment ces signaux se
+                        propagent dans l’eau et de déterminer les meilleurs paramètres pour assurer une transmission et
+                        une réception fiables. Cette expérimentation m’a permis d’identifier les principales contraintes
+                        liées à l’acoustique en milieu aquatique et d’ajuster le système en conséquence.</p>
+                </div>
+                <div class="projet-img"><img src="/projets/DTMF/DTMF_Test_bassine.png" alt="Image robot"
+                        data-zoom="true">
+                </div>
+            </div>
+            <div class="projet-container">
+                <div class="projet-content">
+                    <h3>Conception d'une chaîne d'amplification adaptée pour le traitement par un Raspberry Pi Pico</h3>
+                    <p>Pour adapter les signaux DTMF au niveau requis par l’entrée du Raspberry Pi Pico, j’ai conçu un
+                        circuit d’amplification en veillant à limiter le bruit et les pertes. Cette étape m’a amené à
+                        effectuer de nombreuses simulations de filtres et d’étages analogiques à l’aide d’outils comme
+                        LTspice et TI Analog System Lab Workbench. J’ai ensuite réalisé un PCB pour valider le
+                        fonctionnement du système dans un environnement de test contrôlé.</p>
+
+                </div>
+                <div class="projet-img"><img src="/images/Projets/DTMF.jpg" alt="Image PCB final" data-zoom="true">
+                </div>
+            </div>
+            <div class="projet-container">
+                <div class="projet-content">
+                    <h3>Développement d'un code pour l'interprétation des signaux DTMF </h3>
+                    <p>Un algorithme de décodage DTMF a été implémenté sur le Raspberry Pi Pico,
+                        utilisant le mode DMA (Direct Memory Access) pour gérer efficacement les
+                        interruptions et optimiser le temps de traitement. L'algorithme de Goertzel
+                        a été choisi pour sa capacité à extraire avec précision les tonalités DTMF
+                        à partir des signaux reçus, même dans un environnement bruyant.</p>
+                </div>
+                <div class="projet-img"><img src="/projets/DTMF/Traitement du signal.png" alt="Image robot"
+                        data-zoom="true">
+                </div>
+            </div>
+
+
         </div>
 
     </section>
@@ -41,7 +95,7 @@
             <h2 class="heading">Livrable du projet : <span> Montre de communication sous-marine</span></h2>
             <img src="/images/Projets/DTMF.jpg" alt="" class="imgdeproj">
             <div class="services-box">
-                <i class='bx bxs-file-pdf' ></i>
+                <i class='bx bxs-file-pdf'></i>
                 <h3>Compte rendu de projet</h3>
                 <p>Dossier complet de dévloppement et conception du système de communication sous marine </p>
                 <a href="projets/DTMF/Compte Rendu SAE 3.pdf" download class="btn">Télecharger le dossier</a>
@@ -63,7 +117,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
